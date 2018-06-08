@@ -123,7 +123,7 @@ $(document).ready(function() {
     $("#config-reset-button").bind( "click", onClickConfigResetButton );
     $("#db-reset-button").bind( "click", onClickDBResetButton );
     $(".extensions-link").bind( "click", function(){
-        chrome.tabs.create({url: "chrome://extensions/"});
+        chrome.tabs.create({url: "chrome://extensions/shortcuts"});
     });
 
 });
