@@ -1423,14 +1423,6 @@ $(document).bind('ready', ready);
 
 $(document).bind( "ready", function onready() {
     $(document).unbind( "ready", onready );
-    // 利用規約に同意していない場合は新タブを開いてポップアップを閉じる。
-    // OS X における Chrome だとポップアップのサイズが小さくなってしまうことがあるため。
-    // OS X の Chrome で問題がなくなったら元に戻す。
-    if (!BG.isEuraAgreed()) {
-        BG.createTabWithConfigPage();
-        closeWin();
-        return;
-    }
     changePopupWindowWidthAppropriately();
     pageManager.initialize();
 } );
@@ -1445,25 +1437,20 @@ var pageManager;
     pageManager = {};
     pageManager.initialize = pageManager_initialize;
     pageManager.finalize   = pageManager_finalize;
-    pageManager.showEulaPage = pageManager_showEulaPage;
     pageManager.showMainPage = pageManager_showMainPage;
 
     var currentPage = null;
     var pages = null;
     function pageManager_initialize() {
-        pages = [ eulaPage, mainPage ];
+        pages = [ mainPage ];
         pages.forEach( function ( elem ) { elem.initialize() } );
 
-        !localStorage.eula ? pageManager_showEulaPage()
-                           : pageManager_showMainPage();
+        pageManager_showMainPage();
     }
     function pageManager_finalize() {
         _hideCurrentPage();
         pages.forEach( function ( elem ) { elem.finalize() } );
         pages = null;
-    }
-    function pageManager_showEulaPage() {
-        _showPage( eulaPage );
     }
     function pageManager_showMainPage() {
         _showPage( mainPage );
@@ -1513,32 +1500,6 @@ var Page;
         if ( this.onhide ) this.onhide();
         this._$elem.hide();
     }
-}).call( this );
-
-// XXX 現在は利用規約に同意していない場合は新タブを開いてポップアップを閉じるように
-// なっているので `eulaPage` は使われていない。
-var eulaPage = new Page( "eula" );
-(function extendEulaPageObject() {
-    function eulaAccept() {
-        localStorage.eula = "accepted";
-        UserManager.loginWithRetry(15 * 1000);
-        pageManager.showMainPage();
-    }
-    function onClickAcceptButton( evt ) {
-        eulaAccept();
-    }
-    function onClickNotAcceptButton( evt ) {
-        // TODO closeWin するときの後処理
-        closeWin();
-    }
-    eulaPage.onshow = function eulaPage_onshow() {
-        $("#eula-accept-button-ok").bind( "click", onClickAcceptButton );
-        $("#eula-accept-button-ng").bind( "click", onClickNotAcceptButton );
-    };
-    eulaPage.onhide = function eulaPage_onshow() {
-        $("#eula-accept-button-ok").unbind( "click", onClickAcceptButton );
-        $("#eula-accept-button-ng").unbind( "click", onClickNotAcceptButton );
-    };
 }).call( this );
 
 var mainPage = new Page( "main" );

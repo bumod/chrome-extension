@@ -1,31 +1,3 @@
-
-var isEuraAgreed = function() {
-    return !!localStorage.eula;
-};
-
-var acceptEula = function () {
-    localStorage.setItem("eula", "accepted");
-    UserManager.loginWithRetry(15 * 1000);
-};
-
-// 利用規約に同意していない場合は設定ページを新しいタブで開く
-var createTabWithConfigPage = function () {
-    // XXX Chrome on Mavericks でポップアップをクリックしたときに,
-    // タブをフォアグラウンドで開くと Chrome のウィンドウが隠されてしまう (Cmd-h) 問題の対策
-    // create するときに active:true (デフォルト値) だと必ず隠される
-    chrome.tabs.create({ url: "/background/config.html", active: false }, function (tab) {
-        setTimeout(function () {
-            chrome.tabs.update(tab.id, { active: true });
-        }, 100); // XXX setTimeout しないとダメ
-    });
-};
-
-// 拡張機能のインストール時や Chrome 本体のアップデート時などに呼ばれる
-// See: http://developer.chrome.com/apps/runtime.html#event-onInstalled
-chrome.runtime.onInstalled.addListener(function (evt) {
-    if (!isEuraAgreed()) createTabWithConfigPage();
-});
-
 var Manager = $({});
 
 $.extendWithAccessorProperties(Manager, {
@@ -96,10 +68,6 @@ $.extendWithAccessorProperties(Manager, {
         return;
     },
     updateBookmarkCounter: function(tab) {
-        if (!localStorage.eula) {
-            return;
-        }
-
         chrome.browserAction.setIcon({path: '/images/chrome-b-plus.png'});
 
         if (tab == null || tab.url == null || tab.url.indexOf('http') !== 0 || !Config.get('background.bookmarkcounter.enabled')) {
@@ -217,9 +185,7 @@ $(document).bind('BookmarksUpdated', function() {
 
 $(document).ready(function() {
     // console.log('ready');
-    if (isEuraAgreed()) {
-        UserManager.loginWithRetry(15 * 1000);
-    }
+    UserManager.loginWithRetry(15 * 1000);
 });
 
 chrome.tabs.onUpdated.addListener(function(tabId, opt) {
@@ -280,8 +246,6 @@ chrome.browserAction.onClicked.addListener(function(tab) {
 
 chrome.extension.onConnect.addListener(function(port, name) {
   port.onMessage.addListener(function(info, con) {
-      if (!localStorage.eula) return;
-
       if (info.message)
           ConnectMessenger.trigger(info.message, [info.data, con]);
   });
@@ -351,9 +315,7 @@ chrome.contextMenus.create({
 
 // login check
 setInterval(function() {
-    if (isEuraAgreed()) {
-        UserManager.login();
-    }
+    UserManager.login();
 }, 1000 * 60 * 23);
 
 // chrome webdatabase 5M 制限のため、tag 参照テーブルを作らない
