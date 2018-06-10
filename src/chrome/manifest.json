@@ -3,12 +3,11 @@
   "default_locale": "ja",
   "name": "__MSG_extName__",
   "description": "__MSG_extDescription__",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "permissions": [
     "http://*/*",
     "https://*/*",
     "tabs",
-    "bookmarks",
     "unlimited_storage",
     "contextMenus"
   ],
@@ -79,5 +78,5 @@
       }
     }
   },
-  "content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'"
+  "content_security_policy": "script-src 'self'; object-src 'self'"
 }
