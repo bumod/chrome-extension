@@ -18,8 +18,12 @@
       "128": "images/favicon128.png"
   },
   "browser_action": {
-    "default_icon": "images/chrome-b-plus.png",
-    "default_title": "Hatena Bookmark",
+    "default_icon": {
+      "16": "images/icon16.png",
+      "24": "images/icon24.png",
+      "32": "images/icon32.png"
+    },
+    "default_title": "Bumod",
     "default_popup": "background/popup.html"
   },
   "content_scripts": [
