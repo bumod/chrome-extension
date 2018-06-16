@@ -475,8 +475,8 @@ module( "User" );
 
 test( 'UserView', 2, function () {
     var view = new User.View('nagayama');
-    ok(view.icon.match(/\/users\/na\/nagayama\/profile_s\.gif$/));
-    ok(view.largeIcon.match(/\/users\/na\/nagayama\/profile\.gif$/));
+    ok(view.icon.match(/\/users\/nagayama\/profile_l\.gif$/));
+    ok(view.largeIcon.match(/\/users\/nagayama\/profile\.gif$/));
 });
 
 asyncTest( 'UserManeger', 7, function () {

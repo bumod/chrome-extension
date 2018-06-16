@@ -1120,7 +1120,7 @@ var View = {
                         title = sprintf('%s', fav.name);
                     }
                     var link = Utils.createElementFromString(
-                        '<a href="#{permalink}"><img title="#{title}" alt="#{title}" src="#{icon}" /></a>',
+                        '<a href="#{permalink}"><img title="#{title}" alt="#{title}" src="#{icon}" width="16" height="16" /></a>',
                     {
                         data: {
                             permalink: permalink,
