@@ -45,6 +45,10 @@ img {
   border: none;
 }
 
+p img {
+  vertical-align: top;
+}
+
 input[type='text'] {
   border: 1px solid #b7c5e3;
   padding: 2px 3px;
@@ -224,8 +228,9 @@ a#users-count:visited {
 
 #canonical-tips {
   background-repeat: no-repeat;
-  background-position: left 5px;
-  background-image: url('/images/caution.png');
+  background-position: left 0;
+  background-image: url('/images/alert.svg');
+  background-size: 14px 14px;
   padding-left: 20px;
 }
 
