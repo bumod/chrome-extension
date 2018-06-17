@@ -469,6 +469,14 @@ span#favorites {
   background: #EEE;
 }
 
+.content-header__logo {
+  color: #666 !important;
+  font-family: "Futura", "Trebuchet MS", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-decoration: none;
+}
+
 #bookmark-edit-header {
   padding: 5px 12px 5px 12px;
 }
@@ -484,10 +492,6 @@ span#favorites {
   vertical-align: middle;
 }
 
-#bookmark-edit-header .edit-cell:first-child img {
-  vertical-align: middle;
-  margin-top: -4px;
-}
 
 #bookmark-edit-header .edit-cell:last-child {
   text-align: right;
