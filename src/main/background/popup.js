@@ -1042,11 +1042,12 @@ var View = {
 
         __titleEditToggle: function() {
             var $img = $('#title-editable-toggle');
-            var to_edit_image_path = '/images/edit.png';
-            var to_close_image_path = '/images/close.gif';
+            var to_edit_image_path = '/images/edit.svg';
+            var to_close_image_path = '/images/close.svg';
             if ($img.attr('src').indexOf(to_edit_image_path) == -1) {
                 $img.attr('src', to_edit_image_path);
                 $img.attr('title', 'タイトルを変更する');
+                $img.attr('alt', 'タイトルを変更する');
                 $('#title-text-container').show();
                 $('#title-text-edit-container').addClass('none');
                 $('#title-input').attr('disabled', 'disabled');
@@ -1054,6 +1055,7 @@ var View = {
             } else {
                 $img.attr('src', to_close_image_path);
                 $img.attr('title', '変更をキャンセルする');
+                $img.attr('alt', '変更をキャンセルする');
                 $('#title-text-container').hide();
                 $('#title-text-edit-container').removeClass('none');
                 $('#title-input').attr('disabled', null);
