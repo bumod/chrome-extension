@@ -78,7 +78,7 @@ User.View.prototype = {
 
 User.prototype = {
     get name() { return this._name },
-    get plususer() { return this.options.plususer == 1 },
+    // get plususer() { return this.options.plususer == 1 },
     get rks() { return this.options.rks },
     get private() { return this.options.private == 1 },
     get public() { return !this.private },

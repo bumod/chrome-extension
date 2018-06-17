@@ -218,22 +218,6 @@ var sharingOptions = {};
                     initTemplatedListItemMinimized( $templateElemMin, info ) );
         }
 
-        // mail
-        model.sendMail = { viewIds: [] };
-        model.sendMail.info = info = {
-             id: "send_mail"
-            ,modelId: "sendMail"
-            //,configId: "postMail" // Mail のチェック状態は保持しない?
-            ,name: "send_mail"
-            ,disp_name: "メール"
-            ,icon_img_src: "/images/mail.svg"
-            ,title: "ブックマークしたページを設定で指定したメールアドレスに送信する場合はチェックを入れてください。"
-        }
-        if ( user.plususer ) {
-            model.sendMail.available = true;
-            model.sendMail.viewIds.push(
-                    initTemplatedListItemExpanded( $templateElemEx, info ) );
-        }
 
         $templateElemEx.remove();
         $templateElemMin.remove();

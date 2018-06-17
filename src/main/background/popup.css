@@ -704,8 +704,7 @@ label {
 #post-facebook-label .label-text,
 #post-evernote-label .label-text,
 #post-mixi-check-label .label-text,
-#private-label .label-text,
-#send-mail-label .label-text {
+#private-label .label-text {
   background: 0px 50% no-repeat;
   margin-left: 2px;
   padding-left: 21px;
@@ -729,10 +728,6 @@ label {
 
 #private-label .label-text {
   background-image: url(/images/private.svg);
-}
-
-#send-mail-label .label-text {
-  background-image: url(/images/mail.svg);
 }
 
 #asin-container {
