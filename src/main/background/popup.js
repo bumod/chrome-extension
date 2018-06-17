@@ -722,7 +722,7 @@ var View = {
         __imageDetect: function() {
             var images = this.images;
             if (images && images.length) {
-                images = $.unique(images.concat(['/images/noimages.png']));
+                images = $.unique(images.concat(['/images/noimages.svg']));
                 var list = $('#image-detect-container-list').empty();
                 images.forEach(function(image) {
                     list.append($('<img/>').attr('src', image));
