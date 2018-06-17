@@ -45,8 +45,8 @@ img {
   border: none;
 }
 
-p img {
-  vertical-align: top;
+img.icon {
+  vertical-align: text-top;
 }
 
 input[type='text'] {
