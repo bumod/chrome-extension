@@ -712,27 +712,27 @@ label {
 }
 
 #post-twitter-label .label-text {
-  background-image: url(/images/add-twitter.png);
+  background-image: url(/images/twitter.svg);
 }
 
 #post-facebook-label .label-text {
-  background-image: url(/images/icon-facebook.png);
+  background-image: url(/images/facebook.svg);
 }
 
 #post-evernote-label .label-text {
-  background-image: url(/images/icon-evernote.png);
+  background-image: url(/images/evernote.svg);
 }
 
 #post-mixi-check-label .label-text {
-  background-image: url(/images/icon-mixi.png);
+  background-image: url(/images/mixi.svg);
 }
 
 #private-label .label-text {
-  background-image: url(/images/add-private.png);
+  background-image: url(/images/private.svg);
 }
 
 #send-mail-label .label-text {
-  background-image: url(/images/icon-mail.png);
+  background-image: url(/images/mail.svg);
 }
 
 #asin-container {
@@ -1331,7 +1331,8 @@ em a:visited {
   margin: 0 5px 0 5px;
   background-color: #FFF;
   border: none;
-  background: url(../images/box-open.png) center center no-repeat;
+  background: url(../images/up.svg) center 55% no-repeat;
+  background-size: 8px 6px;
   cursor: pointer;
 }
 
@@ -1384,7 +1385,8 @@ body.sharing-options-panel-opend .option-help-tooltip {
   padding: 2px 5px 0 10px;
   background-color: #FFF;
   border: none;
-  background: url(../images/box-close.png) 10px 50% no-repeat;
+  background: url(../images/down.svg) 14px 50% no-repeat;
+  background-size: 8px 6px;
 }
 
 /** 閉じているときの表示 */

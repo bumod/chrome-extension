@@ -41,7 +41,7 @@ var sharingOptions = {};
         $cloned.attr( "id", null );
         var img = new Image();
         img.src = itemInfo["icon_img_src"];
-        $cloned.find( ".icon-img" ).replaceWith( img );
+        $cloned.find( ".icon" ).attr( "src", itemInfo["icon_img_src"] );
         $cloned.find( "label" ).prop( "title", itemInfo["title"] );
         var $inputElem = $cloned.find( "input" );
         var id = itemInfo["id"];
@@ -59,7 +59,7 @@ var sharingOptions = {};
         $cloned.attr( "id", null );
         var img = new Image();
         img.src = itemInfo["icon_img_src"];
-        $cloned.find( ".icon-img" ).replaceWith( img );
+        $cloned.find( ".icon" ).attr( "src", itemInfo["icon_img_src"] ).attr( "alt", itemInfo["disp_name"] );
         $cloned.find( "label" ).prop( "title", itemInfo["title"] );
         var $inputElem = $cloned.find( "input" );
         var id = itemInfo["id"] + "-minimized";
@@ -119,7 +119,7 @@ var sharingOptions = {};
             ,configId: "postTwitter" // チェック状態を config で保持する際に使用
             ,name: "post_twitter"
             ,disp_name: "Twitter"
-            ,icon_img_src: "/images/add-twitter.png"
+            ,icon_img_src: "/images/twitter.svg"
             ,title: "ブックマークしたページを Twitter へ投稿する場合はチェックを入れてください。"
         };
         if ( user.canUseTwitter ) {
@@ -145,7 +145,7 @@ var sharingOptions = {};
             ,configId: "postFacebook" // チェック状態を config で保持する際に使用
             ,name: "post_facebook"
             ,disp_name: "Facebook"
-            ,icon_img_src: "/images/icon-facebook.png"
+            ,icon_img_src: "/images/facebook.svg"
             ,title: "ブックマークしたページを Facebook へ投稿する場合はチェックを入れてください。"
         };
         if ( user.canUseFacebook ) {
@@ -171,7 +171,7 @@ var sharingOptions = {};
             ,configId: "postEvernote"
             ,name: "post_evernote"
             ,disp_name: "Evernote"
-            ,icon_img_src: "/images/icon-evernote.png"
+            ,icon_img_src: "/images/evernote.svg"
             ,title: "ブックマークしたページを Evernote へ投稿する場合はチェックを入れてください。"
         };
         if ( user.canUseEvernote ) {
@@ -197,7 +197,7 @@ var sharingOptions = {};
             ,configId: "postMixiCheck" // チェック状態を config で保持する際に使用
             ,name: "post_mixi_check"
             ,disp_name: "Mixi チェック"
-            ,icon_img_src: "/images/icon-mixi.png"
+            ,icon_img_src: "/images/mixi.svg"
             ,title: "ブックマークしたページを Mixi チェックへ投稿する場合はチェックを入れてください。"
         }
         if ( user.canUseMixiCheck ) {
@@ -226,7 +226,7 @@ var sharingOptions = {};
             //,configId: "postMail" // Mail のチェック状態は保持しない?
             ,name: "send_mail"
             ,disp_name: "メール"
-            ,icon_img_src: "/images/icon-mail.png"
+            ,icon_img_src: "/images/mail.svg"
             ,title: "ブックマークしたページを設定で指定したメールアドレスに送信する場合はチェックを入れてください。"
         }
         if ( user.plususer ) {
