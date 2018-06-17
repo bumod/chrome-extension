@@ -318,25 +318,12 @@ ul.tab-ui li.tab-link img {
 
 #bookmark-tab,
 #comment-tab {
-  background-image: url(/images/chrome-b-append_off.png);
-  background-position: 5px 3px;
-  background-repeat: no-repeat;
-  padding: 0 5px 0 25px;
-  border-radius: 5px 0 0 5px; /* Chrome 4 以降で使える */
+  padding: 0 5px;
+  border-radius: 5px 0 0 5px;
 }
 
 #comment-tab {
-  background-image: url(/images/serif_list_off.png);
-  padding: 0 8px 0 25px;
-  border-radius: 0 5px 5px 0; /* Chrome 4 以降で使える */
-}
-
-#bookmark-tab.current {
-  background-image: url(/images/chrome-b-append.png);
-}
-
-#comment-tab.current {
-  background-image: url(/images/serif_list.png);
+  border-radius: 0 5px 5px 0;
 }
 
 ul.tab-ui li.current {
