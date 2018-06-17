@@ -1,0 +1,48 @@
+{
+  "name": "",
+  "css_prefix_text": "icon-",
+  "css_use_suffix": false,
+  "hinting": true,
+  "units_per_em": 1000,
+  "ascent": 850,
+  "glyphs": [
+    {
+      "uid": "889a8bd0b481e3523ede8a7d75164cd1",
+      "css": "comment",
+      "code": 59406,
+      "src": "websymbols"
+    },
+    {
+      "uid": "c143979f21d57099d065769037d0a8a0",
+      "css": "b",
+      "code": 66,
+      "src": "custom_icons",
+      "selected": true,
+      "svg": {
+        "path": "M740.6 489.1A272.8 272.8 0 0 0 792.8 328.1 259.7 259.7 0 0 0 540.3 62.5H187.5V937.5H548.8A265.9 265.9 0 0 0 814.4 671.9 263.1 263.1 0 0 0 740.6 489.1ZM375 250H540.3A72.5 72.5 0 0 1 605.3 328.1 72.5 72.5 0 0 1 540.3 406.3H375ZM548.8 750H375V593.8H548.8A78.1 78.1 0 1 1 548.8 750Z",
+        "width": 1000
+      },
+      "search": [
+        "b"
+      ]
+    },
+    {
+      "uid": "b3a537446285bb3510bba57d20374818",
+      "css": "reddit",
+      "code": 59394,
+      "src": "zocial"
+    },
+    {
+      "uid": "b1ec8e90c2c85cf0035849980a3789b3",
+      "css": "twitter",
+      "code": 59392,
+      "src": "zocial"
+    },
+    {
+      "uid": "6f7586c6f99798c3c1de6123d1f6cfa9",
+      "css": "facebook",
+      "code": 59393,
+      "src": "zocial"
+    }
+  ]
+}
