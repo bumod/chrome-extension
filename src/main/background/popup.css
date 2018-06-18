@@ -924,7 +924,8 @@ dd#all-tags {
   border: none;
   width: 100%;
   box-sizing: border-box;
-  background: url(../images/user-search.png) 5px center no-repeat;
+  background: url(../images/search.svg) 5px center no-repeat;
+  background-size: 14px 14px;
   font-size: 12px;
   line-height: 24px;
   padding: 0 10px 0 22px;
