@@ -116,7 +116,8 @@ var Utils = {
         return 'http://b.st-hatena.com/entry/image/' + url.replace('#', '%23');
     },
     faviconUrl: function(url) {
-        return 'http://cdn-ak.favicon.st-hatena.com/?url=' + encodeURIComponent(url.replace('#', '%23'));
+        // return 'http://cdn-ak.favicon.st-hatena.com/?url=' + encodeURIComponent(url.replace('#', '%23'));
+        return 'chrome://favicon/size/16@2x/' + url;
     },
     editBookmarkCurrent: function(winId) {
         chrome.tabs.getSelected(winId, function(tabs) {
@@ -262,7 +263,7 @@ if (typeof jQuery != 'undefined') {
                     // Recurse if we're merging object values
                     if ( deep && !getterFlag && copy && typeof copy === "object" && !copy.nodeType ) {
                         src = target[ name ];
-                        target[ name ] = jQuery.extend( deep, 
+                        target[ name ] = jQuery.extend( deep,
                             // Never move original objects, clone them
                             src || ( copy.length != null ? [ ] : { } )
                         , copy );

@@ -183,7 +183,7 @@ var createBookmarkList = function(bookmark) {
     var html = E('li', {className: 'bookmark'});
     html.appendChild(
        html.head = E('h3', {title: bookmark.title, className: 'entry-search'},
-           E('img', {src: Utils.faviconUrl(bookmark.url)}),
+           E('img', {src: Utils.faviconUrl(bookmark.url), width: 16, height: 16}),
            html.link = E('a', { target: '_blank' }, Utils.truncate(bookmark.title, 56)))
     );
     html.appendChild(
@@ -324,6 +324,7 @@ var View = {
             getInformation().next(function(info) {
                 self.__setTitle(info.title || info.url);
                 self.__titleContainer.css('background-image', info.faviconUrl ? info.faviconUrl : sprintf('url(%s)', Utils.faviconUrl(info.url)));
+                self.__titleContainer.css('background-size', '16px 16px');
                 if (info.url.indexOf('http') != 0) {
                     self.__commentMessage.text('表示できるブックマークコメントはありません');
                     return;
@@ -1034,8 +1035,9 @@ var View = {
             $('#url').text(Utils.truncate(url, 50)).attr('title', url).attr('href', url);
 
             if (!$('#favicon').attr('src')) {
-                var favicon= new URI('http://cdn-ak.favicon.st-hatena.com/');
-                favicon.param({url: url});
+                // var favicon= new URI('http://cdn-ak.favicon.st-hatena.com/');
+                // favicon.param({url: url});
+                var favicon= 'chrome://favicon/size/16@2x/' + url;
                 this.__faviconEL.attr('src', favicon);
             }
         },
