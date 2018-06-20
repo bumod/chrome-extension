@@ -1,0 +1,38 @@
+.hatena-star-add-button {
+  width: 0;
+  height: 16px;
+  overflow: hidden;
+  padding-right: 16px !important;
+  background-size: 16px 16px;
+  background-image: url(/images/star/add.svg);
+}
+
+.hatena-star-star {
+  width: 0;
+  height: 11px;
+  overflow: hidden;
+  padding-right: 11px !important;
+  background-size: 12px 11px;
+}
+[src$="star.gif"].hatena-star-star {
+  background-image: url(/images/star/star.svg);
+}
+[src$="star-red.gif"].hatena-star-star {
+  background-image: url(/images/star/star-red.svg);
+}
+[src$="star-blue.gif"].hatena-star-star {
+  background-image: url(/images/star/star-blue.svg);
+}
+[src$="star-green.gif"].hatena-star-star {
+  background-image: url(/images/star/star-green.svg);
+}
+[src$="star-purple.gif"].hatena-star-star {
+  background-image: url(/images/star/star-purple.svg);
+}
+[src$="star-temp.gif"].hatena-star-star {
+  background-image: url(/images/star/star-temp.svg);
+}
+
+.hatena-star-inner-count {
+  vertical-align: bottom;
+}
