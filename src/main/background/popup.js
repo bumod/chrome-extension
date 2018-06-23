@@ -1164,7 +1164,7 @@ var View = {
 function createUserLink(username) {
     var permalink = sprintf("http://b.hatena.ne.jp/%s/", username);
     return Utils.createElementFromString(
-        '<span><img class="usericon" title="#{title}" alt="#{title}" src="#{icon}" /> <a href="#{permalink}">#{username}</a></span>',
+        '<span><img class="usericon" title="#{title}" alt="#{title}" src="#{icon}" width="16" height="16" /> <a href="#{permalink}">#{username}</a></span>',
     {
         data: {
             permalink: permalink,
