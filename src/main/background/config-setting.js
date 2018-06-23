@@ -33,7 +33,7 @@
         'popup.search.lastWord': '',
         'popup.commentviewer.autodetect.enabled': true,
         'popup.commentviewer.autodetect.threshold': 15,
-        'popup.commentviewer.showTags.enabled': false,
+        'popup.commentviewer.showTags.enabled': true,
         'popup.commentviewer.togglehide': false,
         'popup.commentviewer.mode': 'popular',
         'popup.bookmark.confirmBookmark': false,
