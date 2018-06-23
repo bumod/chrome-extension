@@ -542,12 +542,10 @@ var View = {
                     var str;
                     if (Config.get('popup.commentviewer.showTags.enabled')) {
                         var tags = b.tags.map(function(tag) {
-                            return '<a rel="tag" class="user-tag" href="http://b.hatena.ne.jp/search/tag?q=' + encodeURIComponent(tag) + '">' + tag + '</a>';
-                        }).join(',');
-                        str = '<li class="#{klass}"><a href="#{userlink}"><img width="16" height="16" title="#{user}" alt="#{user}" src="#{icon}" /></a><a class="username" href="#{permalink}">#{user}</a><span class="tags">' + tags + '</span><span class="comment">#{comment}</span><span class="timestamp">#{timestamp}</span></li>';
-                    } else {
-                        str = '<li class="#{klass}"><a href="#{userlink}"><img width="16" height="16" title="#{user}" alt="#{user}" src="#{icon}" /></a><a class="username" href="#{permalink}">#{user}</a><span class="comment">#{comment}</span><span class="timestamp">#{timestamp}</span></li>';
+                            return '<li><a rel="tag" href="http://b.hatena.ne.jp/search/tag?q=' + encodeURIComponent(tag) + '">' + tag + '</a></li>';
+                        }).join(' ');
                     }
+                    str = '<li class="#{klass}"><a href="#{userlink}"><img width="16" height="16" title="#{user}" alt="#{user}" src="#{icon}" /></a><a class="username" href="#{permalink}">#{user}</a><span class="comment">#{comment}</span><ul class="comment-list-tags">' + tags + '</ul><span class="timestamp">#{timestamp}</span></li>';
 
                     var li = Utils.createElementFromString(
                         str,

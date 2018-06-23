@@ -379,7 +379,7 @@ ul.tab-ui li img {
   padding: 0;
 }
 
-.comment-list li {
+.comment-list .userlist {
   padding: 3px 20px 3px 10px;
 }
 
@@ -995,7 +995,7 @@ dd#all-tags {
   padding: 20px 10px 20px 10px;
 }
 
-.comment-list li {
+.comment-list .userlist {
   padding: 7px 10px 7px 10px;
   border-bottom: 1px solid #F0F0F0;
   margin: 0 8px 0 8px;
@@ -1013,18 +1013,32 @@ dd#all-tags {
   text-decoration: underline;
 }
 
-.comment-list li .tags,
-.comment-list li .tags a {
-  color: #aaa;
-  text-decoration: none;
-}
-
-.comment-list li .tags {
-  padding: 0 5px 0 0;
-}
-
 .comment-list li .comment {
   color: #333;
+}
+
+.comment-list-tags {
+  display: inline;
+  margin: 0 0 0 0.5em;
+}
+
+.comment-list-tags li {
+  display: inline;
+  margin: 0 0 0 0.5em;
+}
+
+.comment-list-tags li:first-child {
+  padding-left: 1.3em;
+  background: url(../images/tag.svg) left center no-repeat;
+  background-size: 0.9em;
+}
+
+.comment-list-tags a {
+  color: #b3b3b3;
+  text-decoration: none;
+}
+.comment-list-tags a:hover {
+  text-decoration: underline;
 }
 
 .comment-list li .timestamp {
