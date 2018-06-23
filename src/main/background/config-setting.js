@@ -33,6 +33,7 @@
         'popup.search.lastWord': '',
         'popup.commentviewer.autodetect.enabled': true,
         'popup.commentviewer.autodetect.threshold': 15,
+        'popup.commentviewer.showTags.enabled': false,
         'popup.commentviewer.togglehide': false,
         'popup.commentviewer.mode': 'popular',
         'popup.bookmark.confirmBookmark': false,
@@ -49,7 +50,6 @@
         'popup.tags.allTags.enabled': true,
         'popup.tags.showAllTags': false,
         'popup.tags.complete.enabled': true,
-        'popup.tags.withComment.enabled': false,
         'popup.lastView': 'comment',
         'content.webinfo.enabled': true,
         'background.bookmarkcounter.enabled': true,
@@ -58,4 +58,3 @@
         Config.append(key, defaults[key]);
     });
 })();
-

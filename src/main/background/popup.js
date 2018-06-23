@@ -540,7 +540,7 @@ var View = {
                         b.user, b.timestamp.substring(0, 10).replace(/\//g, ''),
                         eid);
                     var str;
-                    if (Config.get('popup.tags.withComment.enabled')) {
+                    if (Config.get('popup.commentviewer.showTags.enabled')) {
                         var tags = b.tags.map(function(tag) {
                             return '<a rel="tag" class="user-tag" href="http://b.hatena.ne.jp/search/tag?q=' + encodeURIComponent(tag) + '">' + tag + '</a>';
                         }).join(',');
