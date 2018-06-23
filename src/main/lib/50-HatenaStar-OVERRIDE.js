@@ -68,3 +68,11 @@ Hatena.LoginWindow = new Ten.Class({
         Ten.SubWindow.prototype.show.call(this, pos);
     },
 });
+
+/* スターの削除時に confirm() の代わりに　confirmWithCallback() を呼ぶ */
+Hatena.Star.Star.prototype.confirmDeletable = function(res){
+  if (res.result && res.message) {
+    var obj = this
+    confirmWithCallback('comment-list', res.message, function(){ Hatena.Star.Star.prototype.deleteStar.call(obj) });
+  }
+}

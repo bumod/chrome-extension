@@ -779,6 +779,13 @@ label {
   z-index: 20;
 }
 
+#comment-list-confirmation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+}
+
 div#tag-container {
   background-color: #E7F0FC;
   border: 1px solid #E6E6FC;
