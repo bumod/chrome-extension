@@ -108,9 +108,12 @@
     <tr>
       <th>ブックマークカウンター</th>
       <td>
-        <p class="notice">※B! アイコン上のカウンターの設定です。https のページでは、『表示する』を選択してもサーバに情報を送信しません。</p>
+        <p class="notice">※「B」アイコン上のカウンターの設定です。はてなのサーバにページのURLが送信されます。</p>
+        <input type="radio" value="2" id="background.bookmarkcounter.enabled-enable-all" name="background.bookmarkcounter.enabled"/>
+        <label for="background.bookmarkcounter.enabled-enable-all">すべてのページでブックマークカウンターを表示する</label>
+        <br>
         <input type="radio" value="1" id="background.bookmarkcounter.enabled-enable" name="background.bookmarkcounter.enabled"/>
-        <label for="background.bookmarkcounter.enabled-enable">ブックマークカウンターを表示する</label>
+        <label for="background.bookmarkcounter.enabled-enable">HTTPのページのみブックマークカウンターを表示する</label>
         <br>
         <input type="radio" value="0" id="background.bookmarkcounter.enabled-disable" name="background.bookmarkcounter.enabled"/>
         <label for="background.bookmarkcounter.enabled-disable">ブックマークカウンターを表示しない</label>

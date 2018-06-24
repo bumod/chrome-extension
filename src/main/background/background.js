@@ -1,5 +1,15 @@
 var Manager = $({});
 
+// lib/04-HTTPCache.js 内の関数を上書き
+HTTPCache.counter.isValid = function(url){
+  var counterChoice = Config.get('background.bookmarkcounter.enabled');
+  if (url.indexOf('https') == 0 && counterChoice === 1) {
+    return false;
+  } else {
+    return true;
+  }
+}
+
 $.extendWithAccessorProperties(Manager, {
     editBookmark: function(url, options) {
         if (!UserManager.user) {
