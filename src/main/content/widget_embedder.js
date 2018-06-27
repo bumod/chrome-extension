@@ -319,6 +319,10 @@ function E(name, attrs) {
 }
 
 function getEntryURL(url) {
+    if (url.indexOf('https://twitter.com') === 0) {
+        url = url.replace(/^https/, 'http');
+    }
+
     var suffix = url.replace(/#/g, '%23');
     if (suffix.indexOf('http://') === 0)
         suffix = suffix.substring(7);
