@@ -78,6 +78,8 @@ $.extendWithAccessorProperties(Manager, {
         return;
     },
     updateBookmarkCounter: function(tab) {
+        tab.url = Utils.tweekURL(tab.url);
+
         chrome.browserAction.setIcon({
             "path": {
                 "16": "/images/icon16.png",
@@ -184,7 +186,7 @@ chrome.runtime.onMessage.addListener(function(data, sender, sendResponse){
         runAt: "document_end",
     }, function (results) {
         res = results[0];
-        if (res.url !== data.url) {
+        if (Utils.tweekURL(res.url) !== data.url) {
             console.info("ブックマーク対象ページの情報を取得しようとしましたが、タブに表示されているページの URL が期待する URL ではありませんでした。");
             return;
         }
@@ -221,6 +223,7 @@ chrome.tabs.onSelectionChanged.addListener(function(tabId) {
 });
 
 chrome.browserAction.onClicked.addListener(function(tab) {
+    tab.url = Utils.tweekURL(tab.url);
     var url = tab.url;
     var info = window.popupWinInfo;
     if (info) {

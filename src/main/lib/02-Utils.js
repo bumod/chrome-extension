@@ -78,6 +78,13 @@ var Utils = {
           replace(/\.[^\/]+$/, '');
         return Utils.truncate(u, len || 40);
     },
+    tweekURL: function(url) {
+        // Twitter のページへのブックマークがおかしいので暫定措置
+        if (url.indexOf('https://twitter.com') === 0) {
+            url = url.replace(/^https/, 'http');
+        }
+        return url;
+    },
     randomString: function(len) {
         var str = '01234567890ABCDEFGHIJKLMNOPQRSTUVWXYZ';
         var sLen = str.length;

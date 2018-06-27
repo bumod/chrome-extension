@@ -93,6 +93,7 @@ function getInformation() {
     var d = new Deferred();
     if (popupMode) {
         BG.chrome.tabs.getSelected(null, function(tab) {
+            tab.url = Utils.tweekURL(tab.url);
             d.call({
                 url: tab.url,
                 faviconUrl: tab.faviconUrl,
