@@ -11,6 +11,14 @@
 - エンドユーザーライセンス契約を削除
 - 名称変更
 
+## インストール方法
+
+- [ダウンロード](https://github.com/bumod/chrome-extension/releases/)
+
+---
+
+＊以下、オリジナルの README。
+
 ---
 
 本文書は, はてなブックマーク Google Chrome 拡張の開発者向けです。
