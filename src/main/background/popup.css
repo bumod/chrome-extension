@@ -1462,7 +1462,10 @@ body.sharing-options-panel-opend .option-help-tooltip {
   padding: 2px 4px;
   height: 16px;
   width: 27px;
+  box-sizing: content-box;
   font-size: 90%;
+  font-weight: bold;
+  color: #333;
   background-color: #DDDDDD;
   border: 1px solid #E6E6E6;
   border-radius: 5px 5px 0 0;
