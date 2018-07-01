@@ -285,23 +285,13 @@ ul.tab-ui li:hover {
   border: 1px solid #427DC4;
 }
 
-ul.tab-ui li.tab-link {
-  background: transparent;
-  border: none;
-  box-shadow: none; /* Chrome 10 以降で使える */
-  padding-right: 0;
-}
-
-ul.tab-ui li.tab-link a {
-  display: inline-block !important;
-}
-
-ul.tab-ui li.tab-link img {
-  background: rgba(255,255,255,0.1);
-  border: 1px solid rgba(255,255,255,0.2);
-  border-radius: 4px; /* Chrome 4 以降で使える */
-  padding: 2px;
-  display: inline-block;
+ul.tab-ui button {
+  border: 0;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  color: inherit;
+  background-color: transparent;
 }
 
 #header-right ul.tab-ui li {
