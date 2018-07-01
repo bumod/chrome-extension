@@ -938,10 +938,12 @@ var View = {
             if (!form.data('keypressBound')) {
                 form.data('keypressBound', true);
                 form.keypress(function(e) {
-                    if (e.keyCode !== 13 || e.target !== self.__commentEL.get(0))
+                    if (e.keyCode === 13 && e.target == self.__commentEL.get(0)) {
+                        $('#edit-submit').click();
+                        return false;
+                    } else {
                         return;
-                    $('#edit-submit').click();
-                    return false;
+                    }
                 });
             }
 
@@ -1051,7 +1053,7 @@ var View = {
         },
 
         __titleEditToggle: function() {
-            var $img = $('#title-editable-toggle');
+            var $img = $('#title-editable-toggle img');
             var to_edit_image_path = '/images/edit.svg';
             var to_close_image_path = '/images/close.svg';
             if ($img.attr('src').indexOf(to_edit_image_path) == -1) {
@@ -1068,7 +1070,7 @@ var View = {
                 $img.attr('alt', '変更をキャンセルする');
                 $('#title-text-container').hide();
                 $('#title-text-edit-container').removeClass('none');
-                $('#title-input').attr('disabled', null);
+                $('#title-input').attr('disabled', null).select();
                 $('#title-notice').show();
                 if (this.currentEntry && this.currentEntry.title_last_editor) {
                     $('#title-notice-user-container').text('最終変更: ').append(createUserLink(this.currentEntry.title_last_editor)).

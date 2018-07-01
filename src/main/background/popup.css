@@ -130,6 +130,7 @@ a#users-count:visited {
 }
 
 #title-editable-toggle {
+  border: none;
   cursor: pointer;
 }
 
