@@ -2,16 +2,16 @@
 
 ## オリジナルからの変更点
 
-- Tab キーでナビゲートできる #16
-- Twitter の URL へのブックマークに関する不具合をパッチ
-- HTTPS のページでもブックマークカウンターを表示できる（設定でオプトイン）
-- 他の人のコメントのタグを表示できる from [@dlwr](https://github.com/dlwr)
+- Tab キーでナビゲートできる [#16](https://github.com/bumod/chrome-extension/issues/16)
+- Twitter の URL へのブックマークに関する不具合をパッチ [#11](https://github.com/bumod/chrome-extension/issues/16)
+- HTTPS のページでもブックマークカウンターを表示できる（設定でオプトイン）[#7](https://github.com/bumod/chrome-extension/issues/16)
+- 他の人のコメントのタグを表示できる from [@dlwr](https://github.com/dlwr)  [#9](https://github.com/bumod/chrome-extension/pull/9)
 - 自分がつけたスターを削除できる（約5秒マウスカーソルを重ねて）
-- 高精細（Retina）ディスプレイ対応
-- 不要な権限を除去
-- Google Analytics を除去
-- エンドユーザーライセンス契約を削除
-- 名称変更
+- 高精細（Retina）ディスプレイ対応 [#5](https://github.com/bumod/chrome-extension/issues/16)
+- 不要な権限を除去 [#8](https://github.com/bumod/chrome-extension/issues/16)
+- Google Analytics を除去 [#6](https://github.com/bumod/chrome-extension/issues/16)
+- エンドユーザーライセンス契約を削除 [#4](https://github.com/bumod/chrome-extension/issues/16)
+- 名称変更 [#4](https://github.com/bumod/chrome-extension/issues/16)
 
 ## インストール方法
 
