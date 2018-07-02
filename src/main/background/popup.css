@@ -960,9 +960,11 @@ dd#all-tags {
 #show-all-tags-toggle,
 #recommend-tags-container .note,
 #tag-notice .note {
-  padding-left: 10px;
+  margin-left: 10px;
+  border: none;
   font-size: 90%;
   color: #555;
+  background-color: transparent;
   text-decoration: underline;
   cursor:pointer;
 }
