@@ -737,6 +737,7 @@ var View = {
                     list.append($('<img/>').attr('src', image));
                 });
                 $('#image-detect-container').show();
+                $('#image-detect-container-close-button').focus();
             }
         },
         __setCurrentImage: function(url, lastEditor) {
