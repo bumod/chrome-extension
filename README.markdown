@@ -2,6 +2,8 @@
 
 ## オリジナルからの変更点
 
+- ブックマーク数が0ならバッジを表示しない [#20](https://github.com/bumod/chrome-extension/issues/20)
+- フラット風のUI [#19](https://github.com/bumod/chrome-extension/issues/19)
 - Tab キーでナビゲートできる [#16](https://github.com/bumod/chrome-extension/issues/16)
 - Twitter の URL へのブックマークに関する不具合をパッチ [#11](https://github.com/bumod/chrome-extension/issues/11)
 - HTTPS のページでもブックマークカウンターを表示できる（設定でオプトイン）[#7](https://github.com/bumod/chrome-extension/issues/7)
