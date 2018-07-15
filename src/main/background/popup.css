@@ -332,10 +332,6 @@ ul.tab-ui li:last-child button {
   padding: 0;
 }
 
-.comment-list .userlist {
-  padding: 3px 20px 3px 10px;
-}
-
 span.timestamp {
   font-size: 85%;
   color: #999;
@@ -363,9 +359,6 @@ a.username {
   padding-right: 2px;
   vertical-align: bottom;
   min-width: 105px;
-  /*
-  display: inline-block;
-  */
 }
 
 #image-detect-notice-user-container {
@@ -946,11 +939,14 @@ dd#all-tags {
 }
 
 .comment-list .userlist {
-  padding: 7px 10px 7px 10px;
-  border-bottom: 1px solid #F0F0F0;
-  margin: 0 8px 0 8px;
+  padding: 3px 20px 3px 10px;
+}
+.comment-list .userlist {
+  padding: 7px 10px;
+  border-top: 1px solid #f0f0f0;
   font-size: 98%;
   line-height: 1.5;
+  transform: translateY(-1px);
 }
 
 .comment-list li a.username {
