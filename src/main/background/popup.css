@@ -91,27 +91,13 @@ a#users-count:visited {
 /* {{{ header */
 
 #header {
+  position: relative;
   display: table;
-  border-bottom: 1px solid #bbb;
-  box-shadow: 0px 1px 2px rgba(0,0,0,0.2); /* Chrome 10 以降で使える */
   border-top-left-radius: 4px; /* Chrome 4 以降で使える */
   border-top-right-radius: 4px; /* Chrome 4 以降で使える */
-}
-#edit-submit,
-#header {
-  /* gradient を使った青背景 */
-  /* Chrome 10 以降で使える */
-  background: -webkit-linear-gradient( top, #427DC4, #427DC4 50%, #2C6EBD 50%, #2C6EBD );
-  /* current standard; but unimplimented yet (chrome 19) */
-  background: linear-gradient( to bottom, #427DC4, #427DC4 50%, #2C6EBD 50%, #2C6EBD );
-  color: #FFFFFF;
-}
-
-#edit-submit:hover,
-#edit-submit:focus,
-#edit-submit:active {
-  background: -webkit-linear-gradient(top, #84a9d7 46%, #5287c7 54%, #5287c7 100%);
-  background: linear-gradient(to bottom, #84a9d7 46%, #5287c7 54%, #5287c7 100%);
+  padding: 8px 10px;
+  box-shadow: 0px 1px 3px 0px rgba(0,0,0,.2);
+  background-color: #1F84CF;
 }
 
 .table {
@@ -257,78 +243,56 @@ a#users-count:visited {
   display: inline-block;
   padding: 4px 6px 4px 11px;
   margin: 0 0 0 15px;
-  border-radius: 3px; /* Chrome 4 以降で使える */
-  cursor: pointer;
-  color: rgba(255,255,255,1.0);
   border: 1px solid #427DC4;
-  box-shadow: 0px 0px 3px rgba(0,0,0,0.5); /* Chrome 10 以降で使える */
+  border-radius: 3px;
+  cursor: pointer;
+  color: #fff;
+  background-color: #1F84CF;
+  box-shadow: 0px 1px 3px 0px rgba(0,0,0,.2);
+}
+#edit-submit:hover,
+#edit-submit:focus,
+#edit-submit:active {
+  opacity: 0.9;
 }
 
-#edit-submit {
-  border-radius: 3px; /* Chrome 4 以降で使える */
-  box-shadow: none; /* Chrome 10 以降で使える */
+ul.tab-ui {
+  display: flex;
 }
 
 ul.tab-ui li {
-  font-weight: bold;
   display: inline-block;
-  font-size: 12px;
-  line-height: 24px;
   margin: 0;
-  cursor: pointer;
-  color: rgba(255,255,255,0.8);
-  border: 1px solid #427DC4;
-  box-shadow: 0px 0px 3px rgba(0,0,0,0.5); /* Chrome 10 以降で使える */
-}
-
-ul.tab-ui li:hover {
-  background: rgba(255,225,255,0.1);
-  border: 1px solid #427DC4;
+  padding: 0;
 }
 
 ul.tab-ui button {
-  border: 0;
-  font-size: inherit;
-  font-weight: inherit;
-  line-height: inherit;
-  color: inherit;
-  background-color: transparent;
-}
-
-#header-right ul.tab-ui li {
-  background: transparent;
-  border: none;
-  box-shadow: none; /* Chrome 10 以降で使える */
-}
-
-#header-right ul.tab-ui li input[type='image'] {
-  vertical-align: middle;
-  margin-top: -3px;
-  border: none;
-}
-
-#bookmark-tab,
-#comment-tab {
+  box-sizing: border-box;
+  height: 24px;
   padding: 0 5px;
-  border-radius: 5px 0 0 5px;
+  border: 1px solid #fff;
+  border-right: none;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 22px;
+  color: #fff;
+  background-color: #1F84CF;
 }
-
-#comment-tab {
-  border-radius: 0 5px 5px 0;
+ul.tab-ui button:hover {
+  opacity: .9;
 }
-
-ul.tab-ui li.current {
-  color: #2C6EBD;
+ul.tab-ui li.current button {
+  color: #1F84CF;
   background: #fff;
-  border-top-color: rgba(0,0,0,0.3);
-  border-left-color:  rgba(0,0,0,0.3);
-  border-right-color: rgba(255,255,255,0.3);
-  border-bottom-color:  rgba(255,255,255,0.3);
+  border-top: 1px solid rgba(0,0,0,0.2);
 }
-
-ul.tab-ui li img {
-  margin-top: -1px;
-  margin-right: 1px;
+ul.tab-ui li:first-child button {
+  border-left: 1px solid #fff;
+  border-radius: 3px 0 0 3px;
+}
+ul.tab-ui li:last-child button {
+  border-right: 1px solid #fff;
+  border-radius: 0 3px 3px 0;
 }
 
 
@@ -908,26 +872,20 @@ dd#all-tags {
 }
 
 #search-form {
-  display: inline-block;
-  background-color: #FFF;
   -webkit-box-flex: 1;
-  height: 24px;
-  width: 180px;
-  padding: 0;
-  vertical-align: middle;
-  border: 1px solid #cccccc;
-  border-radius: 3px;
 }
 
 #search-form input {
-  border: none;
-  width: 100%;
   box-sizing: border-box;
-  background: url(../images/search.svg) 5px center no-repeat;
-  background-size: 14px 14px;
+  height: 24px;
+  width: 180px;
+  padding: 0 10px 0 22px;
+  border: none;
+  border-top: 1px solid rgba(0,0,0,0.2);
+  border-radius: 3px;
   font-size: 12px;
   line-height: 24px;
-  padding: 0 10px 0 22px;
+  background: #fff url(../images/search.svg) 5px center / 14px 14px no-repeat;
 }
 
 #search-word-preview em {

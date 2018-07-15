@@ -18,14 +18,9 @@ h1 {
   height: 40px;
   line-height: 40px;
   color: #fff;
-    /* Chrome 10 以降で使える */
-    background: -webkit-linear-gradient( top, #427DC4, #427DC4 50%, #2C6EBD 50%, #2C6EBD );
-    /* current standard; but unimplimented yet (chrome 19) */
-    background: linear-gradient( to bottom, #427DC4, #427DC4 50%, #2C6EBD 50%, #2C6EBD );
+    background-color: #1F84CF;
     border-bottom: 1px solid #bbb;
-    box-shadow: 0px 1px 2px rgba(0,0,0,0.2); /* Chrome 10 以降で使える */
-    border-bottom-left-radius: 4px;
-    border-bottom-right-radius: 4px;
+    box-shadow: 0px 1px 3px 0px rgba(0,0,0,.2);
     padding: 5px;
 }
 
