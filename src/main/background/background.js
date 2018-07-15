@@ -89,8 +89,8 @@ $.extendWithAccessorProperties(Manager, {
         });
 
         if (tab == null || tab.url == null || tab.url.indexOf('http') !== 0 || !Config.get('background.bookmarkcounter.enabled')) {
-            chrome.browserAction.setBadgeText({tabId: tab.id, text: ''});
-            chrome.browserAction.setBadgeBackgroundColor({tabId: tab.id, color: [99,99,99, 255]});
+            chrome.browserAction.setBadgeText({tabId: tab.id, text: '-'});
+            chrome.browserAction.setBadgeBackgroundColor({tabId: tab.id, color: [173,204,216, 255]});
             return;
         }
 
@@ -110,9 +110,8 @@ $.extendWithAccessorProperties(Manager, {
         }
 
         HTTPCache.counter.get(tab.url).next(function(count) {
-            if (count == null || isNaN(parseInt(count, 10))) {
-                chrome.browserAction.setBadgeText({tabId: tab.id, text: '-'});
-                chrome.browserAction.setBadgeBackgroundColor({tabId: tab.id, color: [173,204,216, 255]});
+            if (count === '0' || count === null || isNaN(parseInt(count, 10))) {
+                chrome.browserAction.setBadgeText({tabId: tab.id, text: ''});
             } else {
                 // ブックマーク数が 4 桁 (1,000) 以上なら k （キロ）で表現する（切り捨て）
                 var countText = '';
