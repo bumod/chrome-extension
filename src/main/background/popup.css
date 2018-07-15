@@ -527,32 +527,28 @@ label {
   height: 54px;
   margin: 0;
   padding: 0;
+  border: none;
   font-size: 12px;
   line-height: 1.5;
   vertical-align: top;
-  border: none;
-  box-shadow: none; /* Chrome 10 以降で使用可能 */
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box; /* Chrome 10 以降で使用可能 */
   resize: vertical;
 }
 
 #comment:focus {
-  background-color: #fff;
-  border: none;
   outline: none;
 }
 
 #comment-area {
   position: relative;
-  padding: 5px 5px 5px 5px;
+  padding: 6px;
   margin-top: 10px;
-  border: 1px solid #cccccc;
+  border: 1px solid #ccc;
   border-radius: 3px;
+  background-color: #fff;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.2);
 }
 
 #comment-area:hover {
-  border: 1px solid #999;
 }
 
 
@@ -592,14 +588,14 @@ label {
   bottom: 5px;
   right: 20px;
   display: inline-block;
-  border-radius: 6px 0 0 6px;
-  padding-left: 8px;
-  padding-right: 2px;
-  opacity: 0.6;
+  border-radius: 6px;
+  padding-left: 6px;
+  padding-right: 6px;
+  opacity: 0.7;
   font-size: 12px;
   line-height: 12px;
   color: #000;
-  background-color: #FFF;
+  background-color: #e6e6e6;
   white-space: nowrap;
   text-align: right;
   pointer-events: none;
@@ -734,10 +730,7 @@ label {
 }
 
 div#tag-container {
-  background-color: #E7F0FC;
-  border: 1px solid #E6E6FC;
-  border-radius: 3px;
-  padding: 8px 6px 8px 6px;
+  padding: 8px 0px;
   margin: 5px 0 0 0;
   font-size: 12px;
   line-height: 1.5;
@@ -777,23 +770,27 @@ div#tag-container dt {
 }
 
 #recommend-tags-container dd .tag, #all-tags-container dd .tag{
-  margin-right: 1px;
-  padding: 0px 5px 0px 5px;
-  cursor: pointer;
-  white-space: nowrap;
   display: inline-block;
-  border: 1px solid #E7F0FC;
+  white-space: nowrap;
+  margin-right: 0.5em;
+  margin-top: 0.5em;
+  padding: 0px 5px;
+  border-radius: 5px;
+  line-height: 1.5;
+  cursor: pointer;
+  background-color: #eee;
 }
 
 #recommend-tags-container dd .tag:hover, #all-tags-container dd .tag:hover {
-  background-color: #becde0;
-  border-radius: 5px;
+  background-color: #ddd;
 }
 
 #recommend-tags-container dd .selected, #all-tags-container dd .selected {
-  background-color: #7DB4E8;
+  background-color: #999;
   color: #FFF;
-  border-radius: 5px;
+}
+#recommend-tags-container dd .selected:hover, #all-tags-container dd .selected:hover {
+  background-color: #888;
 }
 
 #tag-notice {
