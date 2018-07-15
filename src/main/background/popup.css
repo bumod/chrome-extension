@@ -93,9 +93,9 @@ a#users-count:visited {
 #header {
   position: relative;
   display: table;
-  border-top-left-radius: 4px; /* Chrome 4 以降で使える */
-  border-top-right-radius: 4px; /* Chrome 4 以降で使える */
+  margin: 0 2px;
   padding: 8px 10px;
+  border-radius: 2px;
   box-shadow: 0px 1px 3px 0px rgba(0,0,0,.2);
   background-color: #1F84CF;
 }
@@ -225,7 +225,6 @@ a#users-count:visited {
   display: table-cell;
   width: 100%;
   white-space: nowrap;
-  padding: 4px 4px 4px 10px;
 }
 
 #header-right {
@@ -233,7 +232,6 @@ a#users-count:visited {
   width: 100%;
   text-align: right;
   white-space: nowrap;
-  padding: 4px 10px 4px 0;
 }
 
 #edit-submit {
@@ -407,8 +405,8 @@ span#favorites {
   display: table;
   width: 100%;
   box-sizing: border-box;
-  border-bottom: 1px solid #E6E6E6;
-  background: #EEE;
+  border-bottom: 1px solid #ddd;
+  background: linear-gradient(#fff -10%, #eee);
 }
 
 .content-header__logo {
@@ -1417,15 +1415,15 @@ body.sharing-options-panel-opend .option-help-tooltip {
   font-size: 90%;
   font-weight: bold;
   color: #333;
-  background-color: #DDDDDD;
-  border: 1px solid #E6E6E6;
+  background-color: rgba(0,0,0,.1);
+  border: 1px solid #ddd;
   border-radius: 5px 5px 0 0;
 }
 
 .comment-mode-tab.active{
-  background-color:#FFFFFF;
+  background-color:#fff;
   border-width: 1px;
-  border-color: #E6E6E6 #E6E6E6 #FFFFFF #E6E6E6;
+  border-color: #ddd #ddd #fff #ddd;
 }
 
 .comment-mode-tab:hover{
