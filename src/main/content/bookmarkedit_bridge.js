@@ -40,12 +40,12 @@ function getCannonical() {
 }
 
 function getImages() {
-    var images = Array.prototype.filter.call(document.getElementsByTagName("img"),
+    let images = Array.prototype.filter.call(document.getElementsByTagName("img"),
         function (img) { return (img instanceof HTMLImageElement) });
-    var maxCount = 20;
+    const maxCount = 20;
     if (images.length > maxCount) {
         images = images.map(function (image, index) {
-            var size = Math.min(image.naturalWidth,
+            const size = Math.min(image.naturalWidth,
                                 image.naturalHeight);
             return { image: image, size: size, index: index };
         }).sort(function (a, b) { return b.size - a.size })
@@ -53,7 +53,24 @@ function getImages() {
           .sort(function(a, b) { return a.index - b.index })
           .map(function (item) { return item.image });
     }
-    return images.filter(function(image) { return image && image.src }).map(function(image) { return image.src });
+    let imgArray = images.filter(function(image) { return image && image.src }).map(function(image) { return image.src });
+
+    // og:image を探す。
+    const metaElements = document.getElementsByTagName('meta');
+    let ogImage;
+
+    for(i = 0; i < metaElements.length; i++){
+        if(metaElements[i].getAttribute("property")==="og:image"){
+          ogImage = metaElements[i].getAttribute("content");
+        }
+    }
+
+    // og:image があり、他の画像と重複していなければ、冒頭に加える。
+    if (ogImage && imgArray.indexOf(ogImage) === -1) {
+      imgArray.unshift(ogImage);
+    }
+
+    return imgArray;
 }
 
 function getSelectedString() {
