@@ -78,7 +78,7 @@ a#users-count:visited {
 .usericon,
 #usericon {
   vertical-align:text-bottom;
-  margin:0 4px 0 5px;
+  margin:0 4px 0 2px;
 }
 
 #favicon {
@@ -541,7 +541,7 @@ label {
 #comment-area {
   position: relative;
   padding: 6px;
-  margin-top: 10px;
+  margin-top: 5px;
   border: 1px solid #ccc;
   border-radius: 3px;
   background-color: #fff;
@@ -608,6 +608,7 @@ label {
 
 
 #bookmark-options {
+  margin-top: 10px;
 }
 
 #checkbox-options {

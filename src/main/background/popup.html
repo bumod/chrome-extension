@@ -64,9 +64,6 @@
   <div id="bookmark-edit-container">
     <div id="bookmark-edit-header" class="content-header">
       <div class="edit-cell"><a href="http://b.hatena.ne.jp" class="content-header__logo">Hatena::Bookmark</a></div>
-      <div class="edit-cell">
-        ようこそ<img width="16" height="16" id="usericon" class="icon"><a id="username" href="http://b.hatena.ne.jp/my"></a>さん
-      </div>
     </div>
     <div id="bookmark-message" class="none"></div>
     <div id="bookmark-canonical" class="none">
@@ -141,15 +138,14 @@
         </div>
       </div>
 
-      <div>
-        <div id="bookmark-options">
-          <div id="comment-area">
-            <textarea rows="1" id="comment" name="comment" placeholder="コメントを入力してください (省略可能)"></textarea>
-            <p id="type-counter"><span id="type-count">0</span> / 100</p>
-            <ul id="tag-complete-list" class="shadow"></ul>
-          </div>
-          <input type="hidden" id="input-url" name="url" />
+      <div id="bookmark-options">
+        <img width="16" height="16" id="usericon" class="icon"><a id="username" href="http://b.hatena.ne.jp/my"></a>:
+        <div id="comment-area">
+          <textarea rows="1" id="comment" name="comment" placeholder="コメントを入力してください (省略可能)"></textarea>
+          <p id="type-counter"><span id="type-count">0</span> / 100</p>
+          <ul id="tag-complete-list" class="shadow"></ul>
         </div>
+        <input type="hidden" id="input-url" name="url" />
       </div>
     </div>
 
