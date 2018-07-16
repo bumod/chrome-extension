@@ -185,7 +185,7 @@ var createBookmarkList = function(bookmark) {
     html.appendChild(
        html.head = E('h3', {title: bookmark.title, className: 'entry-search'},
            E('img', {src: Utils.faviconUrl(bookmark.url), width: 16, height: 16}),
-           html.link = E('a', { target: '_blank' }, Utils.truncate(bookmark.title, 56)))
+           html.link = E('a', { target: '_blank' }, bookmark.title))
     );
     html.appendChild(
        html.commentDiv = E('div', {className: 'comment'},
@@ -366,7 +366,7 @@ var View = {
             self.__prevCommentMode = currentMode;
         },
         __setTitle: function(title) {
-            this.__title.text(Utils.truncate(title, 60));
+            this.__title.text(title);
             this.__title.attr('title', title);
         },
         __showNoComment: function() {
@@ -754,7 +754,7 @@ var View = {
             }
         },
         __setCanonical: function(url) {
-            $('#link-canonical').attr('href', url).text(Utils.truncate(url, 40)).attr('title', url);
+            $('#link-canonical').attr('href', url).text(url).attr('title', url);
             $('#canonical-users').empty().attr('href', Utils.entryURL(url)).append(
                 $('<img/>').attr('src', Utils.entryImage(url))
             );
@@ -1048,7 +1048,7 @@ var View = {
 
         __setURL: function(url) {
             $('#input-url').attr('value', url);
-            $('#url').text(Utils.truncate(url, 50)).attr('title', url).attr('href', url);
+            $('#url').text(url).attr('title', url).attr('href', url);
 
             if (!$('#favicon').attr('src')) {
                 // var favicon= new URI('http://cdn-ak.favicon.st-hatena.com/');
@@ -1087,7 +1087,7 @@ var View = {
 
         __setTitle: function(title, force) {
             if (force || !this.titleLoaded) {
-                this.__titleText.text(Utils.truncate(title, 60));
+                this.__titleText.text(title);
                 this.__titleText.attr('title', title);
                $('#title-input').attr('value', title);
             }
@@ -1095,7 +1095,7 @@ var View = {
         },
 
         __setTitleByURL: function(title) {
-            this.__titleText.text(Utils.truncate(title, 70));
+            this.__titleText.text(title);
             this.__titleText.attr('title', title);
            $('#title-input').attr('value', title);
         },
