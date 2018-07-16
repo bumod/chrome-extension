@@ -760,8 +760,12 @@ var View = {
             $('#bookmark-canonical').show();
         },
         __canonicalClick: function() {
+            const altURL = $('#link-canonical').attr('href');
+            chrome.tabs.query({currentWindow: true, active: true}, function (tab) {
+                chrome.tabs.update(tab.id, {url: altURL});
+            });
             this.__loadByInformation({
-                url: $('#link-canonical').attr('href')
+                url: altURL
             });
         },
         __clearView: function() {
