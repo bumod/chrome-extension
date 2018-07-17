@@ -279,7 +279,6 @@ ul.tab-ui button {
   border-right: none;
   font-size: 12px;
   font-weight: bold;
-  line-height: 22px;
   color: #fff;
   background-color: #1F84CF;
 }
@@ -875,7 +874,6 @@ dd#all-tags {
   border-top: 1px solid rgba(0,0,0,0.2);
   border-radius: 3px;
   font-size: 12px;
-  line-height: 24px;
   background: #fff url(../images/search.svg) 5px center / 14px 14px no-repeat;
 }
 
